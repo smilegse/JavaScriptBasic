@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <title>JS Introduction</title>
+    </head>
+    <body>
+        <div>
+            <a href="../Index.html">Back to Home</a>
+        </div>
+        <div>
+            <h2>JavaScript Can Change HTML Content</h2>
+            <hr>
+            <p id="demoContent">JavaScript can change HTML content.</p>
+            <button type="button" onclick="document.getElementById('demoContent').innerHTML = 'Hello JavaScript!'">Click Me!</button>
+
+            <h2>JavaScript Can Change HTML Content</h2>
+            <hr>
+            <button type="button" onclick="document.getElementById('demoDate').innerHTML = Date()" >Click me to display Date and Time</button>
+            <p id="demoDate"> </p>
+
+            <h2>JavaScript Can Change HTML Content</h2>
+            <hr>
+            <h4>The Light Bulb</h4>
+            <button type="button" onclick="document.getElementById('myImage').src='../img/pic_bulbon.gif'"> Turn on the light </button>
+            <img id="myImage" style="width:100px;" src="../img/pic_bulboff.gif" alt="light off">
+            <button type="button" onclick="document.getElementById('myImage').src='../img/pic_bulboff.gif'">Turn off the light</button>
+        
+            <h2>JavaScript Can Change HTML Styles (CSS)</h2>
+            <hr>
+            <p id="myFontSize">JavaScript can change the style of an HTML element.</p>
+            <p id="pShowHidden" style="display: none">JavaScript can show hidden HTML element.</p>
+            
+            <button type="button" onclick="document.getElementById('myFontSize').style.fontSize ='35px'">Click Me!</button>
+            <button type="button" onclick="document.getElementById('myFontSize').style.display = 'none'">Display None</button>
+            <button type="button" onclick="document.getElementById('pShowHidden').style.display = 'block'">Display block</button>
+        
+        </div>
+        
+    </body>
+</html>
