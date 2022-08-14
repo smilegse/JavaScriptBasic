@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Array Iteration</title>
+</head>
+<body>
+    
+    <a href="../Index.html">Back to Home</a>
+    <hr>
+    <h2>JS Array Iteration using forEach()</h2>
+    <hr>
+
+    <p id="demo"></p>
+
+    <h2>Array Iteration modify array value using map()</h2>
+    <hr>
+    <p id="demo2"></p>
+
+    <h2>JavaScript Array.filter()</h2>
+    <hr>
+    <p id="demo3"></p>
+
+    <h2>JavaScript Array.reduce()</h2>
+    <hr>
+    <p id="demo4"></p>
+
+    <h2>JavaScript Array.find()</h2>
+    <hr>
+    <p id="demo5"></p>
+
+    <script>
+
+        const numbers = [40,30,20,50,19,99];
+        let txt = "";
+        // forEach function takes callback function as argument
+        numbers.forEach(myForeach);
+        document.getElementById("demo").innerHTML = txt;
+        function myForeach(value){
+            txt += value + "<br>";
+        }
+
+        const numbers2 = [40,30,20,50,19,99];
+
+        const mapNumbers = numbers2.map(myMap);
+        document.getElementById("demo2").innerHTML = mapNumbers;
+
+        function myMap(value){
+            return value * 2;
+        }
+
+         // filter function takes callback function as argument
+        const numberFilter = [40,30,20,50,19,99];
+        const over40 = numberFilter.filter(myFilter);
+        document.getElementById("demo3").innerHTML = over40;
+
+        function myFilter(value){
+            return value > 40;
+        }
+
+        // filter function takes callback function as argument
+        const numberReduce = [40,30,20,50,19,99];
+                   
+        let sum = numberReduce.reduce(myFilter);
+        document.getElementById("demo4").innerHTML =  "The sum is: " + sum;
+
+        function myFilter(total,value){
+            return total + value;
+        }
+
+
+        // find() function takes callback function as argument
+        const numberFind = [40,30,20,50,19,99];
+        let numberSorted  = numberFind.sort(function(a,b){
+            return b - a;
+        })
+        
+        //alert (numberSorted);
+
+        let sortedValue = numberSorted.find(myFindFunction);
+        document.getElementById("demo5").innerHTML =  "Find value: " + sortedValue;
+
+        function myFindFunction(value){
+            return value < 99;
+        }
+
+
+
+    </script>
+
+</body>
+</html>

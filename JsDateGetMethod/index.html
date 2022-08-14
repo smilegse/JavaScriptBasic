@@ -5,19 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Where To</title>
-    <script>
-        document.getElementById('pDemo').innerHTML = "Onload innerHTML set";
-    </script>
+    
 </head>
 <body>
     <a href="../Index.html">Back to Home</a>
     <hr>
     <h2>JS Where To</h2>
     <p id="pDemo">The value will change using java script button click.</p>
-    <button type="button" onclick="clickMe()" >Click me!</button>
-    <button type="button" onclick="clearMe()" >Clear</button>
+    <script>
 
-    <script src="../scripts/whereto.js">      
+        const months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+        const d = new Date();
+        let month = months[d.getMonth()];
+        document.getElementById('pDemo').innerHTML = "Month Name: "+ month;
     </script>
 
 </body>
