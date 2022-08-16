@@ -11,18 +11,32 @@
     <a href="../Index.html">Back to Home</a>
     <hr>
     <h2>JS Where To</h2>
-    
+    <p id="pDemoArray"></p>
+    <p>
+        Filter months array by getMonth()
+    </p>
     <p id="pDemo">The value will change using java script button click.</p>
+    <p id="pDayArray"></p>
+    <p>
+        Filter in days array by getDay()
+    </p>
+    <p id="pDay">The value will change using java script button click.</p>
+    
     <script>
 
         /* Represent this Month Name */
         const months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+        document.getElementById('pDemoArray').innerHTML = months; 
         const d = new Date();
         let month = months[d.getMonth()];
         document.getElementById('pDemo').innerHTML = "Month Name: "+ month;
     
         /* Represent Todays Day Name */
-        const days = ["Sunday"];
+        const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]; 
+        document.getElementById('pDayArray').innerHTML = days; 
+        let day = days[d.getDay()];
+
+        document.getElementById('pDay').innerHTML = "Todays Day: " + day;
 
     </script>
 
