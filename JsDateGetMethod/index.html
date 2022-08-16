@@ -11,13 +11,19 @@
     <a href="../Index.html">Back to Home</a>
     <hr>
     <h2>JS Where To</h2>
+    
     <p id="pDemo">The value will change using java script button click.</p>
     <script>
 
+        /* Represent this Month Name */
         const months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
         const d = new Date();
         let month = months[d.getMonth()];
         document.getElementById('pDemo').innerHTML = "Month Name: "+ month;
+    
+        /* Represent Todays Day Name */
+        const days = ["Sunday"];
+
     </script>
 
 </body>
